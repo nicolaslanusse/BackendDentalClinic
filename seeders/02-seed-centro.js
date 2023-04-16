@@ -22,7 +22,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-    ]);
+    ],{});
     /**
      * Add seed commands here.
      *
