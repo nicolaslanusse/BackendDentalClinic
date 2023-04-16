@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
-      "centros",
+      "usuarios",
       [
         {
           nombre: "Luis",
@@ -56,8 +56,7 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-
-    await queryInterface.bulkDelete("centros", {
+    await queryInterface.bulkDelete("usuarios", {
       [Op.or]: [
         {
           nombre: "Luis",
