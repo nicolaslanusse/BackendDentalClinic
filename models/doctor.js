@@ -11,12 +11,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       /* Doctores y Usuarios (1:N) */
-      Doctores.belongsTo(models.Usuario, {
+      Doctores.belongsTo(models.Usuarios, {
         as: "usuarios",
         foreignKey: "id_usuario", // foreignKey de Usuario
       });
 
-      Doctores.belongsTo(models.Cita, {
+      Doctores.belongsTo(models.Citas, {
         as: "cita",
         foreignKey: "id_doctor", // foreingKey en Doctor
       });

@@ -11,17 +11,17 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       /* Usuarios y Roles (1:N) */
-      Citas.hasMany(models.Doctor, {
+      Citas.hasMany(models.Doctores, {
         foreignKey: "id_doctor", // foreignKey en modelo Doctor
       });
 
-      Citas.hasMany(models.Paciente, {
+      Citas.hasMany(models.Pacientes, {
         foreignKey: "id_paciente", // foreignKey en modelo paciente
       });
 
       Citas.hasMany(models.Centro, {
         foreignKey: "id_centro", // foreingKey en modelo Centro
-      })
+      });
     }
   }
   Citas.init(

@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      Centro.belongsTo(models.Cita, {
+      Centro.belongsTo(models.Citas, {
         foreignKey: "id_centro", // foreignKey en modelo Cita
       });
     }

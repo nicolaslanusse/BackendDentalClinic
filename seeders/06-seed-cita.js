@@ -7,11 +7,11 @@ module.exports = {
       "citas",
       [
         {
-          id_doctor: 3,
+          id_doctor: 1,
           id_paciente: 1,
           id_centro: 1,
           fecha: new Date(),
-          horario: "15:45:00:0000000",
+          horario: "15:45:00.0000000",
           tratamiento: "Extraer muela de juicio",
           createdAt: new Date(),
           updatedAt: new Date(),
