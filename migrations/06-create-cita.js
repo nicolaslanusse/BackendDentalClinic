@@ -31,7 +31,7 @@ module.exports = {
         },
       },
       fecha: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
       },
       horario: {
         type: Sequelize.TIME,
@@ -50,6 +50,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Citas");
+    await queryInterface.dropTable("citas");
   },
 };

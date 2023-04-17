@@ -8,14 +8,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-
       Centro.belongsTo(models.Citas, {
         foreignKey: "id_centro", // foreignKey en modelo Cita
       });
     }
   }
-  centro.init(
+  Centro.init(
     {
       nombre_lugar: DataTypes.STRING,
       direccion: DataTypes.STRING,
