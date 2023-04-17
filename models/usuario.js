@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "id_rol", // foreignKey de Roles
       });
 
-      Usuarios.hasMany(models.Doctores, {
+      Usuarios.hasOne(models.Doctores, {
         foreignKey: "id_usuario", // foreignKey de Usuario
       });
 
-      Usuarios.hasMany(models.Pacientes, {
+      Usuarios.hasOne(models.Pacientes, {
         foreignKey: "id_usuario", // foreignKey de Doctores
       });
     }
