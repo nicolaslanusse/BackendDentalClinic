@@ -13,7 +13,6 @@ router.use("/", indexRouter);
 router.use("/auth", authRouter);
 // /* users */
 router.use("/users", userRouter);
-// router.use("/register", userRouter)
 // /* appointment */
 router.use("/appointment", appointmentRouter);
 
