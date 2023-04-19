@@ -100,11 +100,11 @@ Tecnologías utilizadas:
 
 - USERS
 
-  - GET USER PROFILE (USE TOKEN)
+  - OBTNER EL PERFIL DE UN USUARIO (USAR TOKEN)
 
           GET http://localhost:3000/users/profile
 
-  - UPDATE USER (USE TOKEN)
+  - ACTUALIZAR USUARIO (USAR TOKEN)
 
           PUT http://localhost:3000/users/profile/update
 
@@ -121,21 +121,51 @@ Tecnologías utilizadas:
     }
     ```
 
-  - CHECK APPOINTMENTS PATIENT (USE TOKEN)
+  - CHEQUEAR CITA PARA PACIENTES (USAR TOKEN)
 
           GET http://localhost:3000/users/appointments/checkall
 
-  - CHECK APPOINTMENTS DOCTOR (USE TOKEN)
+  - CHEQUEAR CITA PARA DOCTORES (USAR TOKEN)
 
           GET http://localhost:3000/users/appointments/checkall/doctor
 
-  - SHOW ALL PATIENTS AS ADMIN (USE TOKEN)
+  - MOSTRAR TODOS LOS PACIENTES COMO ADMIN (USAR TOKEN)
 
           GET http://localhost:3000/users/profile/checkallpatients
 
-  - SHOW ALL DOCTORS AS ADMIN (USE TOKEN)
+  - MOSTRAR TODOS LOS DOCTORES COMO ADMIN (USAR TOKEN)
 
           GET http://localhost:3000/users/profile/checkalldoctors
+
+- CHEQUEAR CITAS PACIENTE (USAR TOKEN)
+
+          GET http://localhost:3000/users/appointments/checkall
+
+  - CHEQUEAR CITAS DOCTOR (USAR TOKEN)
+
+          GET http://localhost:3000/users/appointments/checkall/doctor
+
+  - MOSTRAR TODOS LOS PACIENTES COMO ADMIN (USAR TOKEN)
+
+          GET http://localhost:3000/users/profile/checkallpatients
+
+  - MOSTRAR TODOS LOS DOCTORES COMO ADMIN (USAR TOKEN)
+
+          GET http://localhost:3000/users/profile/checkalldoctors
+
+- CITAS
+
+  - CREAR CITA COMO PACIENTE (USAR TOKEN)
+
+        POST http://localhost:3000/appointment/patient
+
+  - BORRAR CITA COMO PACIENTE (USAR TOKEN Y PASAR ID DE CITA)
+
+        DELETE http://localhost:3000/appointment/7
+
+  - MODIFICAR CITA COMO PACIENTE (USAR TOKEN Y PASAR ID DE CITA)
+
+        PUT http://localhost:3000/appointment/2
 
 </details>
 
