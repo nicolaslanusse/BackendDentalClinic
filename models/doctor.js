@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
 
       /* Doctores y Usuarios (1:N) */
       Doctores.belongsTo(models.Usuarios, {
-        as: "usuarios",
+        as: "Doctor",
         foreignKey: "id_usuario", // foreignKey de Usuario
       });
 
@@ -26,7 +26,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       id_usuario: DataTypes.INTEGER,
       activo: DataTypes.ENUM("si", "no"),
-      especializacion: DataTypes.STRING,
     },
     {
       sequelize,
