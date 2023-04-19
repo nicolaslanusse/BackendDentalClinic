@@ -69,7 +69,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       password: { type: DataTypes.STRING },
-      id_roles: { type: DataTypes.INTEGER },
+      id_rol: { type: DataTypes.INTEGER },
     },
     {
       sequelize,
@@ -79,3 +79,4 @@ module.exports = (sequelize, DataTypes) => {
   );
   return Usuarios;
 };
+
