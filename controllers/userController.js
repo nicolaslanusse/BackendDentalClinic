@@ -5,6 +5,7 @@ const {
   sendErrorResponse,
 } = require("../_util/sendResponse");
 const { hash } = require("../_util/hash");
+const doctor = require("../models/doctor");
 
 const userController = {};
 
@@ -140,6 +141,7 @@ userController.getAllDoctors = async (req, res) => {
       },
       include: {
         model: Usuarios,
+        as: "Doctor",
         attributes: {
           exclude: ["id", "password", "id_rol", "createdAt", "updatedAt"],
         },
