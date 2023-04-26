@@ -66,6 +66,8 @@ authController.login = async (req, res) => {
       role = "user";
     } else if (user.id_rol == 2) {
       role = "admin";
+    } else if (user.id_rol == 3) {
+      role = "doctor";
     }
 
     sendSuccsessResponse(res, 200, {
