@@ -79,4 +79,35 @@ authController.login = async (req, res) => {
     sendErrorResponse(res, 500, "User login failed", error);
   }
 };
+
+// REGISTRAR DOCTOR COMO ADMIN
+authController.registerDoctor = async (req, res) => {
+  const { nombre, email, password, apellidos } = req.body;
+
+  if (password.length < 8) {
+    return sendErrorResponse(
+      res,
+      400,
+      "Password must be larger than 8 characters"
+    );
+  }
+
+  const encryptedPassword = hash(password);
+
+  const newUser = {
+    nombre,
+    apellidos,
+    email,
+    password: encryptedPassword,
+    id_rol: 3,
+  };
+
+  try {
+    let newDoctor = await Usuarios.create(newUser);
+    await Doctores.create({ id_usuario: newDoctor.id });
+    sendSuccsessResponse(res, 201, "Doctor registered succsessfully");
+  } catch (error) {
+    sendErrorResponse(res, 500, "Error creating doctor", error);
+  }
+};
 module.exports = authController;
