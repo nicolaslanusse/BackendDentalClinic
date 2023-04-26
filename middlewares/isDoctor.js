@@ -1,21 +1,12 @@
 const { Doctores } = require("../models");
 const { sendErrorResponse } = require("../_util/sendResponse");
-const isDoctor = async (req, res, next) => {
-  try {
-    const doctor = await Doctores.findOne({
-      where: { id_usuario: req.user_id },
-    });
 
-    if (!doctor) {
-      return sendErrorResponse(res, 403, "Dont have permissions");
-    }
+const isDoctor = (req, res, next) => {
+  const { user_role } = req;
 
-    req.id_doctor = doctor.id;
-
-    next();
-  } catch (error) {
-    return sendErrorResponse(res, 500, "Error verifying user", error);
-  }
+  if (user_role != 3) {
+    return sendErrorResponse(res, 403, "Dont have permission");
+  } else next();
 };
 
 module.exports = isDoctor;
