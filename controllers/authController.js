@@ -1,4 +1,4 @@
-const { Usuarios, Pacientes } = require("../models");
+const { Usuarios, Pacientes, Doctores } = require("../models");
 
 const {
   sendSuccsessResponse,
