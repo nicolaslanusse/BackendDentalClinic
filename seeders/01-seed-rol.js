@@ -9,18 +9,10 @@ module.exports = {
       [
         { nombre_rol: "user", createdAt: new Date(), updatedAt: new Date() },
         { nombre_rol: "admin", createdAt: new Date(), updatedAt: new Date() },
+        { nombre_rol: "doctor", createdAt: new Date(), updatedAt: new Date() },
       ],
       {}
     );
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-     */
   },
 
   async down(queryInterface, Sequelize) {

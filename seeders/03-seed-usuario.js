@@ -37,7 +37,7 @@ module.exports = {
           email: "alberto@gmail.com",
           telefono: 632872539,
           password: bcrypt.hashSync("alberto", 10),
-          id_rol: 1,
+          id_rol: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
